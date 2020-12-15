@@ -1,0 +1,114 @@
+/* ========================================
+
+    CODE YOUR STYLES BELOW!
+
+   ====================================== */
+.layout1 article {
+    width: 58%;
+    float:left; 
+}
+
+.layout1 aside{
+    width: 40%;
+    float:right;
+}
+
+
+.layout1 footer{ 
+    clear: both;
+}
+
+.layout2 header .logo{
+    width: 22%;
+    float: left;
+    margin: 0;
+}
+
+.layout2 header nav{
+    width: 76%;
+    float: right;
+    margin: 0;
+}
+
+/*gambiarra*/
+.layout2 header::after{
+    display: table;
+    content:"";
+    clear:both;
+}
+
+.layout2 article{
+    width: 50%;
+    float:left;
+    margin-left:2%;
+}
+
+.layout2 .sidenav{
+    width: 23%;
+    float: left;
+}
+
+.layout2 .sidebar{
+    width: 23%;
+    float: right;
+
+}
+
+.layout2 footer{
+    clear: both;
+}
+
+
+.layout3 header .logo{
+    width: 22%;
+    float: right;
+    margin: 0;
+}
+
+.layout3 header nav{
+    width: 76%;
+    float: left;
+    margin: 0;
+}
+
+/*gambiarra*/
+.layout3 header::after{
+    display: table;
+    content:"";
+    clear:both;
+}
+
+.layout3 article{
+    width: 32%;
+    margin: 0 2% 0 0;
+    float: left;
+}
+
+.layout3 article:last-child{
+    margin: 0;
+}
+
+/*gambiarra*/
+.layout3 .articles::after{
+    display: table;
+    content:"";
+    clear:both;
+}
+
+@media screen and (max-width: 768px){
+    .layout1 article,
+    .layout1 aside,
+    .layout1 footer,
+    .layout2 header .logo,
+    .layout2 header nav,
+    .layout2 article,
+    .layout2 .sidebar,
+    .layout2 .sidenav,
+    .layout2 footer,
+    .layout3 header .logo,
+    .layout3 header nav,
+    .layout3 article{
+        width: 100%;
+        float: none;
+    }
+}
