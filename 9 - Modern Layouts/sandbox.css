@@ -1,110 +1,96 @@
-
-.layout1 article {
-    width: 58%;
-    float:left; 
+.layout1 .container{
+    display: flex;
 }
 
 .layout1 aside{
-    width: 40%;
-    float:right;
+    margin-left: 2%;
+    width: 42%;
 }
 
-
-.layout1 footer{ 
-    clear: both;
+.layout1 article{
+    width: 58%;
 }
 
-.layout2 header .logo{
-    width: 22%;
-    float: left;
-    margin: 0;
+.layout2 header{
+    display: flex;
+    justify-content: space-between;
 }
 
-.layout2 header nav{
-    width: 76%;
-    float: right;
-    margin: 0;
+.layout2 .logo{
+    width: 20%;
+    margin-bottom: 0;
 }
 
-/*gambiarra*/
-.layout2 header::after{
-    display: table;
-    content:"";
-    clear:both;
+.layout2 nav{
+    width: 78%;
+    margin-bottom: 0;
+}
+
+.layout2 main{
+    display: flex;
 }
 
 .layout2 article{
-    width: 50%;
-    float:left;
-    margin-left:2%;
-}
-
-.layout2 .sidenav{
-    width: 23%;
-    float: left;
+    margin-right: 2%;
+    width:50%;
 }
 
 .layout2 .sidebar{
-    width: 23%;
-    float: right;
-
+    width:23%;
 }
 
-.layout2 footer{
-    clear: both;
+.layout2 .sidenav{
+    margin-right: 2%;
+    width:23%;
 }
 
-
-.layout3 header .logo{
-    width: 22%;
-    float: right;
-    margin: 0;
+.layout3 header{
+    display: flex;
+    justify-content: space-between;
 }
 
-.layout3 header nav{
-    width: 76%;
-    float: left;
-    margin: 0;
+.layout3 .logo{
+    width: 20%;
+    margin-bottom: 0;
+    order: 1;
 }
 
-/*gambiarra*/
-.layout3 header::after{
-    display: table;
-    content:"";
-    clear:both;
+.layout3 nav{
+    width: 78%;
+    margin-bottom: 0;
 }
 
-.layout3 article{
+layout3 .articles{
+    display: flex;
+    justify-content: space-between;
+}
+
+.layout3 .articles article{
     width: 32%;
-    margin: 0 2% 0 0;
-    float: left;
-}
-
-.layout3 article:last-child{
-    margin: 0;
-}
-
-/*gambiarra*/
-.layout3 .articles::after{
-    display: table;
-    content:"";
-    clear:both;
 }
 
 @media screen and (max-width: 768px){
+    .layout1 .container,
+    .layout2 header,
+    .layout2 main,
+    .layout3 header,
+    .layout3 .articles{
+        flex-direction: column ;
+    }
+
+    .layout1 aside, 
     .layout1 article,
-    .layout1 aside,
-    .layout1 footer,
-    .layout2 header .logo,
-    .layout2 header nav,
+    .layout2 .logo,
+    .layout2 nav,
     .layout2 article,
     .layout2 .sidebar,
     .layout2 .sidenav,
-    .layout2 footer,
-    .layout3 header .logo,
-    .layout3 header nav,
-    .layout3 article{
+    .layout3 nav,
+    .layout3 .logo,
+    .layout3 .articles article{
+        margin: 0;
+        margin-bottom: 2%;
         width: 100%;
-        float: none;
     }
+
 }
